@@ -1,0 +1,8 @@
+{
+    "name": "andres", 
+    "description": "WordPress web developer",
+    "courses": {
+        "advanced" : ["PHP", "Javascript"],
+        "basic":    ["Json", "HTML"]
+    }
+}

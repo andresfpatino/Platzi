@@ -1,0 +1,24 @@
+{
+    "name": "andre/iniciar-proyecto-composer",
+    "description": "Ejemplo composer",
+    "type": "library",
+    "require": {
+        "nesbot/carbon": "2.x-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Andre\\IniciarProyectoComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrés Patiño",
+            "email": "andresfelipepatino5@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
