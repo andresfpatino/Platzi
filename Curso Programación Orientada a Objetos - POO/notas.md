@@ -10,6 +10,7 @@
   - [1. Objetos](#1-objetos)
   - [2. Abstracción y Clases](#2-abstracción-y-clases)
   - [3. Modularidad y Clases](#3-modularidad-y-clases)
+  - [4. identificación de objetos en un Sistema de Adopciones](#4-identificación-de-objetos-en-un-sistema-de-adopciones)
 
 
 # Introducción <a name="intro"></a>
@@ -145,3 +146,24 @@ La **modularidad** de nuestro código nos va a permitir:
 + Legibilidad
 + Resolución rápida de problemas
 + Una buena práctica es separando las clases en archivos diferentes.
+
+## 4. identificación de objetos en un Sistema de Adopciones
+
++ Objeto1: perro 
+  + atributos:
+    + raza
+    + tamaño
+    + id
+    + adoptado
+    + disponibilidad
+   
++ Objeto2: persona
+  + atributos:
+    + id
+    + telefono
+    + correo
+    + sexo
+    + edad
+    + dirección
+  + instancia:
+    + adoptar   
