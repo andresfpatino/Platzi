@@ -11,6 +11,9 @@
   - [2. Abstracción y Clases](#2-abstracción-y-clases)
   - [3. Modularidad y Clases](#3-modularidad-y-clases)
   - [4. identificación de objetos en un Sistema de Adopciones](#4-identificación-de-objetos-en-un-sistema-de-adopciones)
+- [Programación Orientada a Objetos. Análisis](#programación-orientada-a-objetos-análisis)
+  - [1. Clases en UML y si sintaxis en código](#1-clases-en-uml-y-si-sintaxis-en-código)
+  - [2. Qué es la herencia?](#2-qué-es-la-herencia)
 
 
 # Introducción <a name="intro"></a>
@@ -167,3 +170,49 @@ La **modularidad** de nuestro código nos va a permitir:
     + dirección
   + instancia:
     + adoptar   
+
+
+# Programación Orientada a Objetos. Análisis
+
+## 1. Clases en UML y si sintaxis en código
+
++ Nombre de clase -> identidad
+  + Atributo -> Estado
+  + Operación -> Comportamiento
+
+
+Java: 
+<pre>
+  class Person {
+    String name = "";
+    void walk(){}
+  }
+</pre>
+
+Python: 
+<pre>
+  class Person:
+    name = "";
+    def walk():
+</pre>
+
+JavaScript: 
+<pre>
+  Person.prototype.walk = function(){
+
+  }
+</pre>
+
+PHP: 
+<pre>
+  class Person{
+    $name = "";
+    function walk(){}
+  }
+</pre>
+
+## 2. Qué es la herencia?
+
++ La *herencia* nos permite crear nuevas clases a partir de otras, se basa en modelos y conceptos de la vida real. También tenemos una jerarquía de padre e hijo.
++ *Don’t repeat yourself* es una filosofía que promueve la reducción de duplicación en programación, esto nos va a inculcar que no tengamos líneas de código duplicadas. 
++ Toda pieza de información *nunca debería ser duplicada* debido a que incrementa la dificultad en los cambios y evolución
