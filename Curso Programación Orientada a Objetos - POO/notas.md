@@ -14,6 +14,9 @@
 - [Programación Orientada a Objetos. Análisis](#programación-orientada-a-objetos-análisis)
   - [1. Clases en UML y si sintaxis en código](#1-clases-en-uml-y-si-sintaxis-en-código)
   - [2. Qué es la herencia?](#2-qué-es-la-herencia)
+  - [3. Objetos, método constructor y su sintaxis en código](#3-objetos-método-constructor-y-su-sintaxis-en-código)
+    - [Forma de dejarlo declarado en la clase](#forma-de-dejarlo-declarado-en-la-clase)
+    - [Forma de llamar los objetos y pasarle los datos](#forma-de-llamar-los-objetos-y-pasarle-los-datos)
 
 
 # Introducción <a name="intro"></a>
@@ -216,3 +219,85 @@ PHP:
 + La *herencia* nos permite crear nuevas clases a partir de otras, se basa en modelos y conceptos de la vida real. También tenemos una jerarquía de padre e hijo.
 + *Don’t repeat yourself* es una filosofía que promueve la reducción de duplicación en programación, esto nos va a inculcar que no tengamos líneas de código duplicadas. 
 + Toda pieza de información *nunca debería ser duplicada* debido a que incrementa la dificultad en los cambios y evolución
+
+
+## 3. Objetos, método constructor y su sintaxis en código
+
++ Los *objetos* nos ayudan a crear instancia de una clase, el objeto es el resultado de lo que modelamos, de los parámetros declarados y usaremos los objetos para que nuestras clases cobren vida.
+
+  *Java*
+  <pre>
+    Person person = new Person();
+  </pre>
+
+  *Python*
+  <pre>
+    persona = Person()
+  </pre>
+
+  *Javascript*
+  <pre>
+    var person = new Person();
+  </pre>
+
+  *PHP*
+  <pre>
+    $person = new Person();
+  </pre>
+  
++ Los *métodos constructores* dan un estado inicial al objeto y podemos añadirle algunos datos al objeto mediante estos métodos. Los atributos o elementos que pasemos a través del constructor serán los datos mínimos que necesita el objeto para que pueda vivir.
+  + Dar un estado inicial al objeto
+  + Tiene el mismo nombre de la clase 
+  +  Son los parámetros mínimos que necesita el objeto para que pueda vivir.
+
+  ### Forma de dejarlo declarado en la clase  
+
+  *Java*
+  <pre>
+    public Person(String name){
+      this.name = name;
+    }
+  </pre>
+
+  *Python*
+  <pre>
+    def__init__(self, name):
+      self.name = name
+  </pre>
+
+  *Javascript*
+  <pre>
+    function Person(name){
+      this.name = name
+    }
+  </pre>
+
+  *PHP*
+  <pre>
+    public function __construct($name){
+      $this->name = name;
+    }
+  </pre>
+
+
+  ### Forma de llamar los objetos y pasarle los datos
+
+  *Java*
+  <pre>
+    Person person = new Person("Andrés");
+  </pre>
+
+  *Python*
+  <pre>
+    person = Person("Andrés")
+  </pre>
+
+  *Javascript*
+  <pre>
+    var person = new Person("Andrés);
+  </pre>
+
+  *PHP*
+  <pre>
+    $person = new Person("Andrés");
+  </pre>
