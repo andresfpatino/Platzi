@@ -1,5 +1,5 @@
-<?php 
-
-class Payment{
+<?php
+class Payment {
     public $id;
 }
+?>
