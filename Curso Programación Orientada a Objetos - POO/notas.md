@@ -17,6 +17,7 @@
   - [8.1 Forma de dejarlo declarado en la clase](#81-forma-de-dejarlo-declarado-en-la-clase)
   - [8.2 Forma de llamar los objetos y pasarle los datos](#82-forma-de-llamar-los-objetos-y-pasarle-los-datos)
 - [9. Encapsulamiento](#9-encapsulamiento)
+- [10. Polimorfismo](#10-polimorfismo)
 
 
 # 1. Por qué aprender programación Orientada a Objetos: POO <a name="clase1"></a>
@@ -320,3 +321,8 @@ Algunos beneficios de encapsulación son:
 + *Private*: Solo podrá ser modificado dentro de la clase.
 
 ![](https://static.platzi.com/media/user_upload/encapsulamiento-Modificadores%20de%20acceso-69d34fb4-21e0-405d-a572-712db3ea171c.jpg)
+
+# 10. Polimorfismo
+*Polimorfismo*: Muchas formas. Poli = muchas, morfismo = formas. NO es Poliformismo
+
++ Es construir métodos con el mismo nombre pero con comportamiento diferente
