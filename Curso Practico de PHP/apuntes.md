@@ -4,6 +4,7 @@
 - [2. Operadores lógicos](#2-operadores-lógicos)
 - [3. Operadores aritméticos](#3-operadores-aritméticos)
 - [4. Estructuras de control](#4-estructuras-de-control)
+- [5. ¿Qué son las funciones?](#5-qué-son-las-funciones)
   
 
 # 1. Qué es la consola de comandos:
@@ -48,3 +49,6 @@ Son aquellos que nos permiten trabajar con operaciones básicas. Suma, resta, mu
 Cuando foreach inicia su ejecución, el puntero apunta directamente al primer elemento del array, por lo que no es necesario llamar a la función reset() antes que un loop foreach. Es recomendable no cambiar el puntero dentro del loop.
 
 + *Switch* La sentencia switch es similar a una serie de sentencias IF en la misma expresión. En muchas ocasiones, es posible que se quiera comparar la misma variable (o expresión) con muchos valores diferentes, y ejecutar una parte de código distinta dependiendo de a que valor es igual. Para esto es exactamente la expresión switch.
+
+# 5. ¿Qué son las funciones?
+Una función es un conjunto de instrucciones a la que podemos recurrir siempre que queramos. Éstas pueden recibir parámetros y realizar todo tipo de tareas, ya sean complejas o sencillas.
