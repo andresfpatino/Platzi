@@ -3,6 +3,7 @@
 - [1. Qué es la consola de comandos:](#1-qué-es-la-consola-de-comandos)
 - [2. Operadores lógicos](#2-operadores-lógicos)
 - [3. Operadores aritméticos](#3-operadores-aritméticos)
+- [4. Estructuras de control](#4-estructuras-de-control)
   
 
 # 1. Qué es la consola de comandos:
@@ -24,3 +25,26 @@ Son aquellos que nos permiten trabajar con operaciones básicas. Suma, resta, mu
 + Incremento: Sirve para incrementar un valor numérico en 1, usamos el operador ++. Ejemplo: $value++, sumará 1 a $value.
 + Decremento: Sirve para disminuir un valor numérico en 1, usamos el operador --. Ejemplo: $value--, restará 1 a $value.
 + Módulo: Sirve para saber el resto de una división entera, usamos el operador %. Ejemplo: 10 % 3; da como resultado 1. Un uso muy polular de este operador es para saber si un número es par o impar
+
+# 4. Estructuras de control
+
++ *if* La estructura de control if permite la ejecución condicional de fragmentos de código.
++ *else* Sirve para ejecutar una sentencia cuando otra no se cumple. else extiende una sentencia if, y se ejecuta cuando ésta es false.
++ *while* Es el tipo más sencillo de loop en PHP. Se ejecutan las sentencias dentro del while siempre y cuando se evalúen como true. El valor de la expresión se comprueba cada vez al inicio del loop, y la ejecución no se detendrá hasta que finalice la iteración (cada vez que PHP ejecuta las sentencias en un loop es una iteración). Si la expresión while se evalúa como false, las sentencias no se ejecutarán ni siquiera una vez. También es posible agrupar varias instrucciones while dentro de una.
++ *do-while* Muy similares a los loops while, simplemente aquí la expresión para el loop se verifica al final en lugar de al principio, esto garantiza que el código se ejecute por lo menos la primera vez.
++ *for*
+    + Las expresiones o conjunto de expresiones van separadas por punto y coma ; y sólo hay 3.
+    + La primera expresión, $i = 1, se ejecuta una vez incondicionalmente al comienzo del bucle.
+    + La segunda expresión, $i <= 10, es una condición, si es true, se ejecutará la tercera expresión.
+    + La tercera expresión, $i++, es la acción a realizar si se cumple la segunda expresión.
+  
+    <pre>
+        for ($i = 1; $i <= 10; $i++) {
+            echo $i;
+        } 
+    </pre>
++ *foreach* foreach permite una forma fácil de iterar sobre arrays u objetos.
+
+Cuando foreach inicia su ejecución, el puntero apunta directamente al primer elemento del array, por lo que no es necesario llamar a la función reset() antes que un loop foreach. Es recomendable no cambiar el puntero dentro del loop.
+
++ *Switch* La sentencia switch es similar a una serie de sentencias IF en la misma expresión. En muchas ocasiones, es posible que se quiera comparar la misma variable (o expresión) con muchos valores diferentes, y ejecutar una parte de código distinta dependiendo de a que valor es igual. Para esto es exactamente la expresión switch.
