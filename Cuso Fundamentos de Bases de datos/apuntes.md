@@ -36,6 +36,13 @@
       - [Segunda Forma Normal (2FN)](#segunda-forma-normal-2fn)
       - [Tercera Forma Normal (3FN)](#tercera-forma-normal-3fn)
       - [Cuarta Forma Normal (4FN)](#cuarta-forma-normal-4fn)
+  - [Modulo 3 RDBMS (MySQL) o cómo hacer lo anterior de manera práctica](#modulo-3-rdbms-mysql-o-cómo-hacer-lo-anterior-de-manera-práctica)
+    - [Clase 13 RDB Qué](#clase-13-rdb-qué)
+    - [Clase 14 Instalación local de un RDBMS (Windows)](#clase-14-instalación-local-de-un-rdbms-windows)
+    - [Clase 15  Instalación local de un RDBMS (Mac)](#clase-15--instalación-local-de-un-rdbms-mac)
+    - [Clase 16 Instalación local de un RDBMS (Ubuntu)](#clase-16-instalación-local-de-un-rdbms-ubuntu)
+    - [Clase 17 Clientes Graficos](#clase-17-clientes-graficos)
+    - [Clase 18 Servicios administrados](#clase-18-servicios-administrados)
 
 
 ## Modulo 1. Bienvenida conceptos básicos y contexto histórico de las Bases de Datos
@@ -383,3 +390,72 @@ Aplicado al ejemplo anterior la tabla materia se independiza y se relaciona con 
 De esta manera, aunque parezca que la información se multiplicó, en realidad la descompusimos o normalizamos de manera que a un sistema le sea fácil de reconocer y mantener la consistencia de los datos.
 
 Algunos autores precisan una 5FN que hace referencia a que después de realizar esta normalización a través de uniones (JOIN) permita regresar a la data original de la cual partió.
+
+
+## Modulo 3 RDBMS (MySQL) o cómo hacer lo anterior de manera práctica
+
+### Clase 13 RDB Qué
+
+**RDBMS** significa Relational Database Management System o sistema manejador de bases de datos relacionales. Es un programa que se encarga de seguir las reglas de Codd y se puede utilizar de manera programática.
+
+### Clase 14 Instalación local de un RDBMS (Windows)
+
+Hay dos maneras de acceder a manejadores de bases de datos:
+
+- Instalar en máquina local un administrador de bases relacional.
+-Tener ambientes de desarrollo especiales o servicios cloud.
+
+En este curso usaremos MySQL porque tiene un impacto histórico siendo muy utilizado y además es software libre y gratuito. La versión 5.6.43 es compatible con la mayoría de aplicaciones y frameworks.
+
+- Root es el usuario principal que tendrá todos los permisos y por lo tanto en ambientes de producción hay que tener mucho cuidado al configurarlo.
+
+Link
+<https://dev.mysql.com/downloads/windows/installer/5.6.html>
+
+Procedimiento:
+
+- Descargamos e instalamos como es usual en windows
+- En el instalador seleccionamos la opción custom
+- Instalamos MySQL Server la version 64bts
+- Instalamos MySQL Workbench (ignoramos lo demás)
+
+![Instalador_mysql_1](src/Instalador_mysql_1.png)
+![Instalador_mysql_2](src/Instalador_mysql_2.png)
+![Instalador_mysql_3](src/Instalador_mysql_3.png)
+
+### Clase 15  Instalación local de un RDBMS (Mac)
+
+La instalación es similar al todos los instaladores en mac, descarga el archivo .dmg
+
+<https://dev.mysql.com/downloads/workbench/>
+
+Para macOS debes descargar workbench aparte.
+
+<https://dev.mysql.com/downloads/mysql/5.7.html>
+
+### Clase 16 Instalación local de un RDBMS (Ubuntu)
+
+Visita la dirección de descarga de la versión de comunidad de MySql
+<https://dev.mysql.com/downloads/mysql/5.7.html#downloads>
+
+Dirígete a la sección de selección de descargas y selecciona tu distribución de Linux. En nuestro caso Ubuntu y selecciona posteriormente la versión que estás utilizando actualmente, en nuestro caso 18.04 de 64 bits.
+
+Los pasos son similares a los otros sistemas, descarga el paquete .deb, también puedes instalar desde la consola
+
+sudo apt-get install mysql-server
+
+### Clase 17 Clientes Graficos
+
+Observamos el preview y pasos para crear un schema en Mysql workbench
+
+![worckbench_1](src/worckbench_1.png)
+
+![worckbench_2](src/worckbench_2.png)
+
+![worckbench_3](src/worckbench_3.png)
+
+### Clase 18 Servicios administrados
+
+Hoy en día muchas empresas ya no tienen instalados en sus servidores los RDBMS sino que los contratan a otras personas. Estos servicios administrados cloud te permiten concentrarte en la base de datos y no en su administración y actualización.
+
+Introducción a google cloud, toma el curso para configurarlo.
