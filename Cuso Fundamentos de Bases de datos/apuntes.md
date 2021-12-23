@@ -88,6 +88,18 @@
     - [Clase 47 Construyendo Platziblog en Firestore](#clase-47-construyendo-platziblog-en-firestore)
     - [Clase 48 Proyecto final: transformando tu proyecto en una db no relacional](#clase-48-proyecto-final-transformando-tu-proyecto-en-una-db-no-relacional)
       - [Regla 1. Piensa en la vista de tu aplicación](#regla-1-piensa-en-la-vista-de-tu-aplicación)
+  - [Modulo 6 Bases de datos en la vida real](#modulo-6-bases-de-datos-en-la-vida-real)
+    - [Clase 49 Bases de datos en la vida real](#clase-49-bases-de-datos-en-la-vida-real)
+    - [Clase 50 Big Data](#clase-50-big-data)
+    - [Clase 51 Data warehouse](#clase-51-data-warehouse)
+    - [Clase 52 Data mining](#clase-52-data-mining)
+    - [Clase 53 ETL](#clase-53-etl)
+    - [Clase 54 Business intelligence](#clase-54-business-intelligence)
+    - [Clase 55 Machine Learning](#clase-55-machine-learning)
+    - [Clase 56 Data Science](#clase-56-data-science)
+    - [Clase 57 Por que aprender bases de datos hoy](#clase-57-por-que-aprender-bases-de-datos-hoy)
+  - [Bonus](#bonus)
+    - [Clase 58 Bases de datos relacionales vs no relacionales](#clase-58-bases-de-datos-relacionales-vs-no-relacionales)
 
 
 ## Modulo 1. Bienvenida conceptos básicos y contexto histórico de las Bases de Datos
@@ -1784,3 +1796,83 @@ Regla 2. La colección tiene vida propia
 Esta regla se refiere a que la excepción a la regla 1 es cuando tenemos un caso en que la “entidad” que tiene necesidad de vivir y modificarse constantemente de manera independiente a las otras colecciones. Por ejemplo en Platziblog podemos en el ejemplo anterior hacer una excepción a autores porque nos conviene tenerlas como top level collection en el sentido que se añadan, borren, cambien o listen los usuarios sin depender del blog post.
 
 Experimenta aplicando estas dos reglas a un proyecto que ya conozcas en una base de datos relacional y trata de convertirla en un proyecto de Firestore y comentanos los retos a los que te enfrentaste.
+
+
+## Modulo 6 Bases de datos en la vida real
+
+### Clase 49 Bases de datos en la vida real
+
+Para datos historicos, queries complejos usar bigquery optimizado para datawherehouse
+
+Para datos del estado de nuestra aplicacion usa colecciones con mongo o firebase.
+
+Puedes usar dos bases de datos en un mismo proyecto, guardar datos de mongo, convertirlos pasarlos a bigquery y hacer analisis sobre ellos.
+
+### Clase 50 Big Data
+
+**Big Data** es un concepto que nace de la necesidad de manejar grandes cantidades de datos. La tendencia comenzó con compañías como **YouTube** al tener la necesidad de guardar y consultar mucha información de manera rápida.
+
+Es un gran movimiento que consiste en el uso de diferentes tipos de bases de datos.
+
+Un ejemplo  es cassandra pero tiene ciertos tipos de desventaja, su ventaja manejar datos masivos a gran velocidad
+
+### Clase 51 Data warehouse
+
+**Data Warehouse** trata de guardar cantidades masivas de datos para la posteridad. Allí se guarda todo lo que no está viviendo en la aplicación pero es necesario tenerlo.
+Debe servir para guardar datos por un largo periodo de tiempo y estos datos se deben poder usar para poder encontrar cuestiones interesantes para el negocio.
+
+Google usa **BigTable**, usa una sola tabla, pero no sirve tanto para hacer consultas
+
+**Data Warehouse** es un archivo historico, archivo muerto, en  otra base de datos. Sirve para dos actividades principales:
+
+- Guarda una gran cantidad de datos de forma "eterna".
+- Poder extraer los datos para hacer analitica.
+
+BigQuery es muy utilizado
+
+### Clase 52 Data mining
+
+El **Data Mining** se dedica a minar datos, a extraerlos de donde sea que estén (archivos muertos, base de datos actual, etc…) y hacer sentido de ellos para darles un uso.
+
+### Clase 53 ETL
+
+**ETL** son las siglas de Extract, Transform, Load (extraer, transformar y cargar). Se trata de tomar datos de archivos muertos y convertirlos en algo que sea de utilidad para el negocio.
+También ayuda a tomar los datos vivos de la aplicación, transformarlos y guardarlos en un data warehouse periódicamente.
+
+### Clase 54 Business intelligence
+
+**Business Intelligence** es una parte muy importante de las carreras de datos ya que es el punto final del manejo de estos. Su razón de ser es tener la información lista, clara y que tenga todos los elementos para tomar decisiones en una empresa.
+Es necesario tener una buena sensibilidad por entender el negocio, sus necesidades y la información que puede llevar a tomar decisiones en el momento adecuado al momento de realizar business intelligence.
+
+### Clase 55 Machine Learning
+
+**Machine Learning** tiene significados que varían. Es una serie de técnicas que involucran la inteligencia artificial y la detección de patrones.
+Machine learning para datos tiene un gran campo de acción y es un paso más allá del business intelligence.
+Nos ayuda a hacer modelos que encuentran patrones fortuitos encontrando correlaciones inesperadas.
+
+**Tiene dos casos de uso particulares:**
+
+- Clasificación
+- Predicción
+
+### Clase 56 Data Science
+
+**Data Science** es aplicar todas las técnicas de procesamiento de datos. En su manera más pura tiene que ver con gente con un background de estadísticas y ciencias duras.
+
+### Clase 57 Por que aprender bases de datos hoy
+
+¡Has concluido el curso! Ahora tienes potentes herramientas y posibilidades para ingresar en este apasionante campo.
+
+Llevaste diagramas a bases de datos, exploraste un poco el mundo de las bases de datos no relacionales, hicimos un proyecto en firestore y transformamos Platzi blog de una base de datos relacional en una base de datos de documentos.
+
+Dentro de las posibilidades que tienes hoy en día puedes hacer: Machine learning, ETL, Data Warehouse, Data mining, entre otros.
+
+Recuerda practicar mucho con el proyecto. Te invito a que tomes el examen y verifiques tus conocimientos. ¡Exitos!
+
+## Bonus
+
+### Clase 58 Bases de datos relacionales vs no relacionales
+
+Las bases de datos relacionales han estado entre nosotros durante un largo tiempo y han sido usadas por grandes como Google, Amazon, entre otros. Aún son usadas por bancos, aseguradoras, etc.
+
+Las bases de datos no relacionales surgen cuando las grandes empresas sintieron necesidad de guardar y extraer grandes cantidades de datos en muy cortos periodos de tiempo, como YouTube.
