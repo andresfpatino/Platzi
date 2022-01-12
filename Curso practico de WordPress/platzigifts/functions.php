@@ -23,6 +23,8 @@ function template_styles(){
     wp_enqueue_script( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array('jquery','popper'), true);
 
     wp_enqueue_script( 'custom', get_template_directory_uri()."/assets/js/custom.js", false,"1.1", true );
+
+    wp_localize_script('custom', 'pg', array('ajaxurl' => admin_url('admin-ajax.php')));
 }
 
 add_action('wp_enqueue_scripts','template_styles');
@@ -73,3 +75,68 @@ function productos_type() {
 
 }
 add_action( 'init', 'productos_type');
+
+add_action('init', 'lstCreateCustomTaxonomies');
+function lstCreateCustomTaxonomies(){
+
+    $taxonomy = array(
+        'labels' => array(
+            'name'          => _x('Categorías de Productos', 'taxonomy general name', 'ls19'),
+            'singular_name' => _x('Categoría de Productos', 'taxonomy singular name', 'ls19'),
+            'search_items'  => __('Buscar categoría'),
+            'all_items'     => __('Todas las categorías'),
+            'edit_item'     => __('Editar categoría'),
+            'update_item'   => __('Actualizar categoría'),
+            'add_new_item'  => __('Agregar categoría'),
+            'menu_name'     => __('Categorías de Productos')
+        ),
+        'slug' => 'categorias-productos',
+        'post_types' => array('producto')
+    );
+
+    $args = array(
+        'hierarchical'      => true,
+        'public'            => true,
+        'labels'            => $taxonomy['labels'],
+        'show_ui'           => true,
+        'show_in_nav_menus' => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => $taxonomy['slug'])
+    );
+    register_taxonomy($taxonomy['slug'], $taxonomy['post_types'], $args);
+}
+
+add_action('wp_ajax_nopriv_filtroProductos','filtroProductos');
+add_action('wp_ajax_filtroProductos','filtroProductos');
+function filtroProductos(){
+
+    $args = array(
+        'post_type' => 'producto',
+        'posts_per_page' => -1,
+        'order'     => 'ASC',
+        'orderby' => 'title',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'categorias-productos',
+                'field' => 'slug',
+                'terms' => $_POST['categoria']
+            )
+        )
+    );
+    $productos = new WP_Query($args);
+
+    $return = array();
+    if ($productos->have_posts()) {
+        while($productos->have_posts()){
+            $productos->the_post();
+            $return[] = array(
+                'imagen' => get_the_post_thumbnail(get_the_ID(), 'large'),
+                'link' => get_permalink(),
+                'titulo' => get_the_title()
+            );
+        }
+    }
+
+    wp_send_json($return);
+}
