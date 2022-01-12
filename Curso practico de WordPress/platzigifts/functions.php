@@ -181,3 +181,53 @@ function novedadesAPI($data)
    
     return $return;
 }
+
+add_action('init', 'pgRegisterBlock');
+function pgRegisterBlock()
+{
+    // Requiere los parámetros generados automaticamente por WP Scripts
+    $asset_file = include_once get_template_directory().'/blocks/build/index.asset.php';
+    //Registra el script
+    wp_register_script(
+        'pgb-js',
+        get_template_directory_uri().'/blocks/build/index.js',
+        $asset_file['dependencies'],
+        $asset_file['version']
+    );
+
+    register_block_type(
+        'pgb/basic-block',
+        array(
+            'editor_script' => 'pgb-js',
+            'render_callback' => 'pgRenderDynamicBlock'
+        )
+    );
+}
+
+function pgRenderDynamicBlock($attributes, $content)
+{
+    return '<h2>'.$attributes['content'].'</h2>';
+}
+
+add_action('acf/init', 'pgAcfRegisterBlocks');
+function pgAcfRegisterBlocks()
+{
+
+    if (function_exists('acf_register_block')) {
+        $block = array(
+            'name'            => 'pg-slider',
+            'title'           => __('PG Institucional', 'lst'),
+            'description'     => __('Bloque para generar la página institucional de Platzi Gifts.', 'lst'),
+            'render_template' => get_template_directory().'/template-parts/block-institucional.php',
+            'category'        => 'layout',
+            'icon'            => 'format-gallery',
+            'mode'            => 'edit',
+            'keywords'        => array(
+                'platzi',
+                'wordpress'
+            )
+        );
+
+        acf_register_block($block);
+    }
+}
