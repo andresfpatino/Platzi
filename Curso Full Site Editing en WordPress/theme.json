@@ -1,0 +1,44 @@
+{
+    "version": 1,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "slug": "green",
+                    "color": "#98ca3f",
+                    "name": "Green"
+                },
+                {
+                    "slug": "dark-blue",
+                    "color": "#121f3d",
+                    "name": "Dark Blue"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "610px",
+            "wideSize": "1280px"
+        },
+        "typography": {
+            "fontSizes": [
+                {
+                    "slug": "np",
+                    "size" : "14px",
+                    "name": "New Paragraph"
+                }
+            ]
+        },
+        "blocks": {
+            "core/paragraph": {
+                "color": {
+                    "custom": true
+                }
+            },
+            "core/heading": {
+                "color": {
+                    "custom": false
+                }
+            },
+        }
+    }
+}
