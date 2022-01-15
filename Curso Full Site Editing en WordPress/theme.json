@@ -40,5 +40,22 @@
                 }
             },
         }
+    },
+    "styles": {
+        "color":{
+            "background": "var(--wp--preset--color--dark-blue) !important",
+            "text": "var(--wp--preset--color--green) !important"
+        },
+        "blocks": {
+            "core/paragraph": {
+                "color": {
+                    "background": "var(--wp--preset--color--green) !important",
+                    "text": "var(--wp--preset--color--dark-blue) !important"
+                }
+            },
+            "typography": {
+                "fontSize": "var(--wp--preset--font-size--np) !important"
+            }       
+        }
     }
 }
