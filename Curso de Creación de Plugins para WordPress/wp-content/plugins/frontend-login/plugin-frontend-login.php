@@ -12,9 +12,3 @@
  * Update URI:        https://github.com/andresfpatino
  * Text Domain:       my-basics-plugin
  */
-
-
-function plz_test(){
-    echo "<h1>Mi primer plugin</h1>";
-}
-add_action("wp_head", "plz_test");
