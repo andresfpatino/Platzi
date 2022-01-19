@@ -12,3 +12,6 @@
  * Update URI:        https://github.com/andresfpatino
  * Text Domain:       my-basics-plugin
  */
+
+
+ require_once(plugin_dir_path(__FILE__) . 'public/shortcode/form-registro.php');
