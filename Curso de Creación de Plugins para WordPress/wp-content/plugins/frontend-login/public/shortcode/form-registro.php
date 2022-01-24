@@ -1,17 +1,19 @@
 <?php 
-
 function plz_script_registro(){
-    wp_register_script('plz-registro', plugins_url('../assets/js/registro.js', __FILE__));
+    wp_register_script("plz-registro",plugins_url("../assets/js/registro.js",__FILE__));
 }
-add_action('wp_enqueue_scripts', 'plz_script_registro');
+
+add_action("wp_enqueue_scripts", "plz_script_registro");
+
 
 function plz_add_register_form(){
-    wp_enqueue_script('plz-registro');
+    wp_enqueue_script("plz-registro");
+
     $response = '
     <div class="signin">
         <div class="signin__container">
             <h1 class="sigin__titulo">Register</h1>
-            <form class="signin__form" id="signin">
+            <form class="signin__form" id="signup">
                 <div class="signin__name name--campo">
                     <label for="Name">Name</label>
                     <input name="name" type="text" id="Name">

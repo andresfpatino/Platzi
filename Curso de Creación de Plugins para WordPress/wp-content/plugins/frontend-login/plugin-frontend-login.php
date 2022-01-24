@@ -20,3 +20,4 @@ require_once(plugin_dir_path(__FILE__) . '/public/shortcode/form-login.php');
 
 // API REST
 require_once(plugin_dir_path(__FILE__) . '/includes/API/api-register.php');
+require_once(plugin_dir_path(__FILE__) . '/includes/API/api-login.php');
