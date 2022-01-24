@@ -21,3 +21,14 @@ require_once(plugin_dir_path(__FILE__) . '/public/shortcode/form-login.php');
 // API REST
 require_once(plugin_dir_path(__FILE__) . '/includes/API/api-register.php');
 require_once(plugin_dir_path(__FILE__) . '/includes/API/api-login.php');
+
+// User role
+function plz_plugin_activate(){
+    add_role('cliente', 'Cliente', "read_posts");
+}
+register_activation_hook(__FILE__, 'plz_plugin_activate');
+
+function plz_plugin_desactivate(){
+    remove_role('cliente');
+}
+register_deactivation_hook(__FILE__, 'plz_plugin_desactivate');
