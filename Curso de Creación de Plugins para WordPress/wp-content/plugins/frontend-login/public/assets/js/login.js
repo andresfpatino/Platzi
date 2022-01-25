@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded",function(){
         let datos = new FormData($form);
         let datosParse = new URLSearchParams(datos);
 
-        fetch("http://yardsales.plz/wp-json/plz/login",{
+        fetch(`${plz.rest_url}/login`,{
             method: "POST",
             body: datosParse
         }
@@ -17,7 +17,9 @@ window.addEventListener("DOMContentLoaded",function(){
         .then(res=>res.json())
         .then(json=>{
             console.log(json)
-            $msg.innerHTML = json?.msg;
+            if(json !== false){
+                window.location.href = plz.home_url;
+            }           
         })
         .catch(err=>{
             console.log(`Hay un error: ${err}`)

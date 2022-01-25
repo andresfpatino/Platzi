@@ -14,13 +14,15 @@
  */
 
 
+define( 'PLZ_PATH', plugin_dir_path( __FILE__ ) );
+
  // Shortcodes
-require_once(plugin_dir_path(__FILE__) . '/public/shortcode/form-registro.php');
-require_once(plugin_dir_path(__FILE__) . '/public/shortcode/form-login.php');
+require_once PLZ_PATH."/public/shortcode/form-registro.php";
+require_once PLZ_PATH."/public/shortcode/form-login.php";
 
 // API REST
-require_once(plugin_dir_path(__FILE__) . '/includes/API/api-register.php');
-require_once(plugin_dir_path(__FILE__) . '/includes/API/api-login.php');
+require_once PLZ_PATH."/includes/API/api-register.php";
+require_once PLZ_PATH."/includes/API/api-login.php";
 
 // User role
 function plz_plugin_activate(){
