@@ -1,0 +1,11 @@
+{
+  "name": "ecmascript6",
+  "version": "1.0.0",
+  "description": "Curso ECMAScript +6 de plazi - Oscar barajs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrés Patiño",
+  "license": "MIT"
+}
