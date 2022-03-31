@@ -1,3 +1,11 @@
+/*
+* Table of contents
+*  1. Functions in ES6+ - default parameters
+*  2. Template literals
+*  3. Multi-line strings
+*/
+
+
 // Way to write functions ES5
 function oldFuntion (name, age, country) {
     var name = name || 'Andrés Patiño';
@@ -7,7 +15,7 @@ function oldFuntion (name, age, country) {
 }
 
 
-// ES6+ way of writing functions
+// 1. ES6+ way of writing functions
 function FunctionES6(name = 'Andrés Patiño', age = 27, country = 'CO') {
     console.log(name, age, country);
 }
@@ -21,9 +29,19 @@ let world = "World";
 let phrase = hello + " " + world;
 console.log(phrase);
 
-// Concatenation ES6+
+// 2. Template literals ES6+
 let hello2 = "Hello";
 let world2 = "World";
 let phrase2 = `${hello2} ${world2}`; // Template literals
 // To wirte the quoatation marks in template literals use ALT + 96 ``
 console.log(phrase2);
+
+// Multi-line strings ES5
+let lorem = "lorem ipsum dolor sit amet consectetur adipisicing elit. \n" + "Quisquam, quidem, quos, dolores, voluptas, quae, dolore, officia, eaque, doloribus, quaerat, voluptate, quisquam quisquam.";
+
+// 3. Multi-line strings ES6+
+let lorem2 = `Lorem ipsum dolor
+sit amet consectetur adipisicing elit.`;
+
+console.log(lorem);
+console.log(lorem2);
