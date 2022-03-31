@@ -6,3 +6,10 @@ if(numbers.includes(7)){
 } else {
     console.log('The array does not include 7');
 }
+
+
+// 2. Exponentiation operator
+let base = 4;
+let exponent = 3;
+let result = base ** exponent;
+console.log(result);
