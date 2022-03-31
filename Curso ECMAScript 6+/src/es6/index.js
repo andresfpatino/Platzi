@@ -5,6 +5,7 @@
 *  3. Multi-line strings
 *  4. Destructuring
 *  5. Spread operator
+*  6. Let and Const
 */
 
 
@@ -67,3 +68,24 @@ let team2 = ['Kiara', 'Kira', 'Martín'];
 
 let mascotas = ['Mia', ...team1, ...team2];
 console.log(mascotas);
+
+
+// 6. Let and Const ES6+
+{
+    var globalVar = "Global Var";
+    // var works in global scope
+}
+
+{
+    let globalLet = "Global Let";
+    console.log(globalLet);
+    // Let only works in the scope of the block
+}
+
+console.log(globalVar);
+
+
+const a = "b";
+a = "a";
+// Error: Assignment to constant variable. it's not possible to change the value of a constant variable
+console.log(a);
