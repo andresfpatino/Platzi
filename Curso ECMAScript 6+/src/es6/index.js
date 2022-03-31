@@ -10,6 +10,7 @@
 *  8. Arrow functions
 *  9. Promises
 *  10. Classes
+*  11. Import and export
 */
 
 
@@ -161,3 +162,8 @@ class calculator {
 
 const calc = new calculator();
 console.log(calc.sumar(2,2));
+
+
+// 11. Import ES6+
+import { hello } from './module';
+hello();
