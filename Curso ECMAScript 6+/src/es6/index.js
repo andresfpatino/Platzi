@@ -3,6 +3,7 @@
 *  1. Functions in ES6+ - default parameters
 *  2. Template literals
 *  3. Multi-line strings
+*  4. Destructuring
 */
 
 
@@ -45,3 +46,15 @@ sit amet consectetur adipisicing elit.`;
 
 console.log(lorem);
 console.log(lorem2);
+
+
+// 4. Destructuring ES6+
+let person = {
+    'name': 'Andrés Patiño',
+    'age': 27,
+    'country': 'CO'
+}
+
+let { name, age, country } = person;
+
+console.log(name, age, country);
