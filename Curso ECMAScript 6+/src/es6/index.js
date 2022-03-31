@@ -4,6 +4,7 @@
 *  2. Template literals
 *  3. Multi-line strings
 *  4. Destructuring
+*  5. Spread operator
 */
 
 
@@ -58,3 +59,11 @@ let person = {
 let { name, age, country } = person;
 
 console.log(name, age, country);
+
+
+// 5. Spread operator ES6+
+let team1 = ['Coco', 'Berlín', 'Atenea'];
+let team2 = ['Kiara', 'Kira', 'Martín'];
+
+let mascotas = ['Mia', ...team1, ...team2];
+console.log(mascotas);
