@@ -11,6 +11,7 @@
 *  9. Promises
 *  10. Classes
 *  11. Import and export
+*  12. Generators
 */
 
 
@@ -167,3 +168,19 @@ console.log(calc.sumar(2,2));
 // 11. Import ES6+
 import { hello } from './module';
 hello();
+
+
+// 12. Generators ES6+
+function* helloWorld() {
+    if (true) {
+        yield 'Hello, ';
+    }
+    if (true) {
+        yield 'World';
+    }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
