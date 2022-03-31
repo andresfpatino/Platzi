@@ -9,6 +9,7 @@
 *  7. Object short syntax
 *  8. Arrow functions
 *  9. Promises
+*  10. Classes
 */
 
 
@@ -143,3 +144,20 @@ helloPromise()
     .then(response => console.log(response))
     .then(() => console.log('hola'))
     .catch(error => console.log(error));
+
+
+// 10. Classes ES6+
+class calculator {
+    constructor(){
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    sumar(valueA, valueB){
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sumar(2,2));
