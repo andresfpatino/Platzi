@@ -6,6 +6,7 @@
 *  4. Destructuring
 *  5. Spread operator
 *  6. Let and Const
+*  7. Object short syntax
 */
 
 
@@ -89,3 +90,11 @@ const a = "b";
 a = "a";
 // Error: Assignment to constant variable. it's not possible to change the value of a constant variable
 console.log(a);
+
+
+// 7. Object short syntax ES6+
+let nombre = 'Andrés Patiño';
+let edad = '27';
+
+obj2 = {nombre, edad};
+console.log(obj2);
