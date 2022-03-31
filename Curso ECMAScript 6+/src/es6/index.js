@@ -8,6 +8,7 @@
 *  6. Let and Const
 *  7. Object short syntax
 *  8. Arrow functions
+*  9. Promises
 */
 
 
@@ -126,3 +127,19 @@ const listOfNames4 = name => {
 
 const square = num => num * num;
 
+
+// 9. Promises ES6+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (true) {
+            resolve('Hey!');
+        } else {
+            reject('Ups!');
+        }
+    });
+}
+
+helloPromise() 
+    .then(response => console.log(response))
+    .then(() => console.log('hola'))
+    .catch(error => console.log(error));
