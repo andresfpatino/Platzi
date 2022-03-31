@@ -19,3 +19,8 @@ const team2 = {
 const values = Object.values(team2);
 console.log(values);
 console.log(values.length);
+
+// 3. Padding
+const string = 'hello';
+console.log(string.padStart(7, 'hi'));
+console.log(string.padEnd(12, '----'));
