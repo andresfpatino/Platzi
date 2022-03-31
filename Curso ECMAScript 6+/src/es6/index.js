@@ -7,6 +7,7 @@
 *  5. Spread operator
 *  6. Let and Const
 *  7. Object short syntax
+*  8. Arrow functions
 */
 
 
@@ -98,3 +99,30 @@ let edad = '27';
 
 obj2 = {nombre, edad};
 console.log(obj2);
+
+
+// 8. Arrow functions ES6+
+const names = [
+    {name: 'Andrés Patiño', age: 27},
+    {name: 'Tatiana', age: 24},
+];
+
+// ES5
+let listOfNames = names.map(function(item) {
+    console.log(item.name);
+});
+
+// ES6+
+// Anonymous function
+const listOfNames2 = names.map(item => console.log(item.name)); 
+
+const listOfNames3 = (name, age, country) => {
+    // ...
+}
+
+const listOfNames4 = name => {
+    // ...
+}
+
+const square = num => num * num;
+
