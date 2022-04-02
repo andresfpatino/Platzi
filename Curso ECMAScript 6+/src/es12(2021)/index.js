@@ -20,3 +20,17 @@ const promise3 = new Promise((resolve, reject) => resolve("3"));
 
 Promise.any([promise1, promise2, promise3])
     .then(response => console.log(response));
+
+
+// New logic operators
+let isTrue = true;
+let isFalse = false;
+console.log(isTrue &&= isFalse);
+
+let isTrue2 = true;
+let isFalse2 = false;
+console.log(isTrue2 ||= isFalse2);
+
+let isTrue3 = undefined;
+let isFalse3 = false;
+console.log(isTrue3 &&= isFalse3);
