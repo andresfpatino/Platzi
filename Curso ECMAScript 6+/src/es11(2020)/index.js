@@ -23,3 +23,10 @@ Promise.allSettled([promise1, promise2, promise3])
 // 4. globalThis
 console.log(window);
 console.log(globalThis);
+
+// 5. Nullish operator (??)
+const fooo = null ?? 'default string';
+console.log(fooo);
+
+const fooo2 = 'not null' ?? 'default string';
+console.log(fooo2)
