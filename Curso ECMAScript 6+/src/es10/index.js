@@ -22,3 +22,7 @@ try {
 } catch {
     error
 }
+
+// 6. fromEntries
+let entries = [["name", "oscar"], ["age", 32]];
+console.log(Object.fromEntries(entries))
