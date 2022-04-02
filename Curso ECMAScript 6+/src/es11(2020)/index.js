@@ -30,3 +30,13 @@ console.log(fooo);
 
 const fooo2 = 'not null' ?? 'default string';
 console.log(fooo2)
+
+// 6. Optional chaining
+const user = {};
+console.log(user?.profile?.email);
+
+if(user?.profile?.email) {
+    console.log('email')
+} else{
+    console.log('fail')
+}
