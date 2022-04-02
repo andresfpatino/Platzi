@@ -26,3 +26,8 @@ try {
 // 6. fromEntries
 let entries = [["name", "oscar"], ["age", 32]];
 console.log(Object.fromEntries(entries))
+
+// 7. Symbol object
+let mySymbol = 'My Symbol';
+let symbol = Symbol(mySymbol);
+console.log(symbol.description);
