@@ -20,3 +20,18 @@ const obj1 = {
     country: 'CO',
 }
 console.log(obj1);
+
+
+// 3. Promise finally
+const helloWorld = () => {
+    return new Promise((resolve, reject) => {
+        (true)
+            ? resolve('Hello world')
+            : reject(new Error('Test error'))
+    })
+}
+
+helloWorld()
+  .then(response => console.log(response))
+  .catch(error => console.log(error))
+  .finally(() => console.log('finalizó'))
