@@ -10,3 +10,8 @@ console.log(array2.flatMap(value => [value, value * 2]));
 let hello = '           Hello world';
 console.log(hello);
 console.log(hello.trimStart());
+
+// 4. Method trimEnd
+let hello2 = 'hello world                  ';
+console.log(hello2);
+console.log(hello2.trimEnd());
