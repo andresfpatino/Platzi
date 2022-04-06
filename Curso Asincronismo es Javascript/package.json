@@ -4,7 +4,8 @@
   "description": "Curso platzi asincronismo en Js",
   "main": "src/index.js",
   "scripts": {
-    "callback" : "node src/callbacks/index.js"
+    "callback": "node src/callbacks/index.js",
+    "callback:challenge": "node src/callbacks/challenge-api.js"
   },
   "keywords": [
     "callbacks",
@@ -12,5 +13,8 @@
     "async"
   ],
   "author": "MIT",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
 }
