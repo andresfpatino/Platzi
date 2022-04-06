@@ -1,0 +1,16 @@
+{
+  "name": "curso-asincronismo-es-javascript",
+  "version": "1.0.0",
+  "description": "Curso platzi asincronismo en Js",
+  "main": "src/index.js",
+  "scripts": {
+    "callback" : "node src/callbacks/index.js"
+  },
+  "keywords": [
+    "callbacks",
+    "promises",
+    "async"
+  ],
+  "author": "MIT",
+  "license": "ISC"
+}
