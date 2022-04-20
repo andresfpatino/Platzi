@@ -10,9 +10,50 @@
 </head>
 <body>
     <nav></nav>
-    <section>
-        <div id="home"></div>
-        <div id="recomendadas"></div>
+    <div id="tabBar"></div>
+    <section class="w-full h-screen">
+        <div id="home">
+            <div class="w-full h-3/4">
+                <div class="absolute flex flex-col items-center w-full h-full py-4 space-y-96">
+                    <input class="p-3 rounded-full shadow-sm outline-none" placeholder="Search" type="search">
+                    <button class="w-auto px-8 py-2 text-sm font-semibold bg-white rounded-full shadow-sm font-Montserrat text-primary">Explore More</button>
+                </div>
+                <div class="w-full h-full">
+                    <img src="./img/sanFrancisco.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-between w-full p-20" id="recomendadas">
+
+            <div class="card">
+                <div class="w-full bg-cover rounded-t-lg h-3/5 bg-bali"></div>
+                <div class="w-full p-5 rounded-b-lg bg-secondary h-2/5">
+                    <p class="pb-0 text-lg font-bold text-white font-Montserrat">Bali</p>
+                    <p class="font-light text-white font-Montserrat">Beautifull landscapes</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="w-full bg-cover rounded-t-lg h-3/5 bg-chicago"></div>
+                <div class="w-full p-5 rounded-b-lg bg-secondary h-2/5">
+                    <p class="pb-0 text-lg font-bold text-white font-Montserrat">Chicago</p>
+                    <p class="font-light text-white font-Montserrat">Beautifull landscapes</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="w-full bg-cover rounded-t-lg h-3/5 bg-europe"></div>
+                <div class="w-full p-5 rounded-b-lg bg-secondary h-2/5">
+                    <p class="pb-0 text-lg font-bold text-white font-Montserrat">Europe</p>
+                    <p class="font-light text-white font-Montserrat">Beautifull landscapes</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="w-full bg-cover rounded-t-lg h-3/5 bg-iceland"></div>
+                <div class="w-full p-5 rounded-b-lg bg-secondary h-2/5">
+                    <p class="pb-0 text-lg font-bold text-white font-Montserrat">Iceland</p>
+                    <p class="font-light text-white font-Montserrat">Beautifull landscapes</p>
+                </div>
+            </div>
+        </div>
         <div id="rentas_destacadas"></div>
     </section>
     <footer></footer>
