@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tw:build" : "npx tailwindcss -i ./src/css/index.css -o ./public/css/index.css --watch"
+    "tw:build": "npx tailwindcss -i ./src/css/index.css -o ./public/css/index.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "tailwind-scrollbar-hide": "^1.1.7"
   }
 }

@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -472,6 +472,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: absolute;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -486,6 +490,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-full {
   height: 100%;
+}
+
+.h-72 {
+  height: 18rem;
 }
 
 .h-3\/5 {
@@ -508,22 +516,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .items-center {
   align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .space-y-96 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(24rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(24rem * var(--tw-space-y-reverse));
+}
+
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overscroll-x-contain {
+  overscroll-behavior-x: contain;
 }
 
 .rounded-full {
@@ -550,6 +564,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(143 162 6 / var(--tw-bg-opacity));
 }
 
+.bg-tertiary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(97 174 201 / var(--tw-bg-opacity));
+}
+
 .bg-bali {
   background-image: url('../img/bali.jpg');
 }
@@ -574,8 +593,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.75rem;
 }
 
-.p-20 {
-  padding: 5rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-5 {
@@ -608,6 +627,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg {
@@ -648,10 +672,34 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-default {
+  -ms-overflow-style: auto;
+  scrollbar-width: auto;
+}
+
+.scrollbar-default::-webkit-scrollbar {
+  display: block;
+}
+
 .card {
   height: 16rem;
   width: 12rem;
+  flex: none;
+  flex-shrink: 0;
   border-radius: 0.5rem;
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:overflow-scroll:hover {
+  overflow: scroll;
 }
