@@ -30,6 +30,7 @@ module.exports = {
         },
     },
     variants: {
+        width: ['responsive', 'hover', 'focus', 'group-hover'],
         extend: {},
     },
     content: ['./public/index.html', './src/**/*.{html,js}'],
