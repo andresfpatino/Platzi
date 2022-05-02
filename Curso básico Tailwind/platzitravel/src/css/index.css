@@ -5,3 +5,7 @@
 .card {
     @apply flex-none w-48 h-64 rounded-lg drop-shadow-lg shrink-0 transform transition-all hover:-translate-y-4 hover:shadow-xl;
 }
+
+.cardTitle {
+    @apply text-3xl px-8 pt-8 pb-2 font-semibold text-white; 
+}
