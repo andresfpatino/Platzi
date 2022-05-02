@@ -516,6 +516,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 24rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-full {
   width: 100%;
 }
@@ -566,6 +570,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-x-auto {
