@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+    darkMode: 'class',
     theme: {
         colors: {
             'primary':"#CC2D4A",
@@ -8,6 +9,12 @@ module.exports = {
             'tertiary':"#61AEC9",
             'white' : "#FFFFFF",
             'black' : "#000000",
+            'gray' : {
+                900: '#111827;',
+                800: '#1F2937',
+                700: '#374151',
+                300: '#D1D5DB;',
+            }
         },
         fontFamily: {
             Montserrat: ["Monserrat", "sans-serif"],
