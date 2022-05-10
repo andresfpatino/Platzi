@@ -16,5 +16,5 @@
   "bin": {
     "random-msg": "./bin/global.js"
   },
-  "preferGlobal": true,
+  "preferGlobal": true
 }
