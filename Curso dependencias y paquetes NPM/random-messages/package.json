@@ -1,7 +1,7 @@
 {
-  "name": "random-messages",
+  "name": "random-names-ap",
   "version": "1.0.0",
-  "description": "Random messages package",
+  "description": "Random names package",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,5 @@
   "bin": {
     "random-msg": "./bin/global.js"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
 }

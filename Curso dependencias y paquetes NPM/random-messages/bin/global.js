@@ -2,4 +2,4 @@
 
 let random = require('../src/index.js');
 
-randomMsg();
+random.randomMsg();
